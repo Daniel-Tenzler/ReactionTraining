@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Reaction Training</string>
+    <string name="wait_for_green">Wait for green...</string>
+    <string name="tap_now">TAP NOW!</string>
+    <string name="too_early">Too early! Tap to try again.</string>
+    <string name="reaction_time_ms">%dms</string>
+    <string name="tap_to_start">Tap to start</string>
+    <string name="tap_to_try_again">Tap to try again</string>
+    <string name="reaction_training">Reaction Training</string>
+    <string name="statistics">Statistics</string>
+    <string name="average">Average</string>
+    <string name="best">Best</string>
+    <string name="worst">Worst</string>
+    <string name="attempts">Attempts</string>
+    <string name="no_data_yet">No data yet</string>
+    <string name="game_screen_content">Reaction training game screen</string>
+</resources>
