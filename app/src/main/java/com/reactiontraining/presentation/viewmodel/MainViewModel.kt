@@ -36,6 +36,9 @@ class MainViewModel @Inject constructor(
     private val _stats = MutableStateFlow<ReactionStats?>(null)
     val stats: StateFlow<ReactionStats?> = _stats.asStateFlow()
 
+    private val _statsExpanded = MutableStateFlow(false)
+    val statsExpanded: StateFlow<Boolean> = _statsExpanded.asStateFlow()
+
     private var timerStartTime: Long = 0
     private var timerJob: Job? = null
     private var readyTime: Long = 0
@@ -122,6 +125,10 @@ class MainViewModel @Inject constructor(
                 startGame()
             }
         }
+    }
+
+    fun toggleStatsExpanded() {
+        _statsExpanded.value = !_statsExpanded.value
     }
 
     fun resetStats() {

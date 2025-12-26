@@ -41,7 +41,10 @@ fun MainScreen(
         modifier = modifier
             .fillMaxSize()
             .background(Color.DarkGray)
-            .semantics { contentDescription = "Reaction training game screen" },
+            .semantics { 
+                contentDescription = "Reaction training game screen"
+            }
+            .clickable { onScreenTap() },
         contentAlignment = Alignment.Center
     ) {
         Box(
@@ -62,8 +65,7 @@ fun MainScreen(
                     )
                 }
                 .clip(CircleShape)
-                .background(circleColor)
-                .clickable { onScreenTap() },
+                .background(circleColor),
             contentAlignment = Alignment.Center
         ) {
             when (uiState.gameState) {

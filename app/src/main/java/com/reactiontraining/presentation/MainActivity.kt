@@ -39,7 +39,7 @@ fun ReactionTrainingApp() {
     val viewModel: MainViewModel = hiltViewModel()
     val uiState by viewModel.uiState.collectAsState()
     val stats by viewModel.stats.collectAsState(initial = null)
-    var statsExpanded by remember { mutableStateOf(false) }
+    val statsExpanded by viewModel.statsExpanded.collectAsState()
     
     Box(modifier = Modifier.fillMaxSize()) {
         MainScreen(
@@ -51,7 +51,7 @@ fun ReactionTrainingApp() {
         StatsCard(
             stats = stats,
             expanded = statsExpanded,
-            onToggleExpanded = { statsExpanded = !statsExpanded },
+            onToggleExpanded = { viewModel.toggleStatsExpanded() },
             onResetStats = { viewModel.resetStats() },
             modifier = Modifier.align(androidx.compose.ui.Alignment.BottomCenter)
         )
